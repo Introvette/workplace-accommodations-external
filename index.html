@@ -4,19 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Workplace Accommodations External</title>
+  </head>
+  <body>
+    <h2>Workplace Accommodations</h2>
+    <p>
+      Charlotte-Mecklenburg Schools provides reasonable accommodations for
+      employees with disabilities. These resources will help you understand the
+      process and how to submit requests.
+    </p>
+    <h4>ADA Compliance</h4>
+    <p>
+      The Americans with Disabilities Act (ADA) prohibits discrimination against
+      people with disabilities. The purpose of the law is to make sure that
+      people with disabilities have the same rights and opportunities as
+      everyone else and it guarantees equal opportunity for individuals with
+      disabilities in public accommodations, employment, transportation, state
+      and local government services, and telecommunication.
+    </p>
     <script>
-      $(document).ready(function () {
-        $(".collapsible").on("click", function (e) {
-          e.preventDefault();
-          var content = $(this).next();
-          var icon = $(this).find(".icon");
-          if (content.is(":visible")) {
-            icon.text("-");
-          } else {
-            icon.text("+");
-          }
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const collapsibles = document.querySelectorAll(".collapsible");
+
+        for (const collapsible of collapsibles) {
+          collapsible.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+
+            if (content.style.display === "block") {
+              content.style.display = "none";
+              this.querySelector(".icon").textContent = "+";
+            } else {
+              content.style.display = "block";
+              this.querySelector(".icon").textContent = "-";
+            }
+          });
+        }
       });
     </script>
     <script>
@@ -35,9 +59,6 @@
         });
       }
     </script>
-    <title>Workplace Accommodations External</title>
-  </head>
-  <body>
     <div class="collapsible-wrapper">
       <button type="button" class="collapsible">
         Who's Protected<span class="icon">+</span>
