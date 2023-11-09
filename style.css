@@ -15,7 +15,7 @@
 }
 
 .collapsible p {
-  width: 100%; /* Set the width to 100% to match the button's width */
+  width: 100%;
   margin: 0;
 }
 
@@ -31,20 +31,20 @@
 }
 
 .content {
-  padding: 0; /* Remove padding to align perfectly with the button */
+  padding: 0;
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
-  width: 100%; /* Set the width to 100% to match the button's width */
+  width: 100%;
   margin: 0;
 }
 
 .content-questions {
-  padding: 0; /* Remove padding to align perfectly with the button */
+  padding: 0;
   display: none;
   overflow: hidden;
   background-color: white;
-  width: 100%; /* Set the width to 100% to match the button's width */
+  width: 100%;
   margin: 0;
 }
 
